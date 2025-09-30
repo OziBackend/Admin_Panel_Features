@@ -1,0 +1,29 @@
+.sidebar {
+    width: 200px;
+    background: #2c3e50;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .sidebar h2 {
+    text-align: center;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .sidebar ul li:hover {
+    background: #34495e;
+  }
+  .dropdown {
+    padding-left: 20px;
+    display: none;
+  }
+  .sidebar ul li:hover .dropdown {
+    display: block;
+  }
+  
