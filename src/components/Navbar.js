@@ -1,13 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import "./Navbar.css";
 
 function Navbar({ setIsLoggedIn }) {
   const { darkMode, toggleTheme} = useTheme();
+  const navigate = useNavigate();
   
   const handleLogout = () => {
     setIsLoggedIn(false);
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (

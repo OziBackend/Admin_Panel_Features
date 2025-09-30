@@ -1,17 +1,23 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login({ setIsLoggedIn }) {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (user === "admin" && pass === "admin") {
+
+    console.log(user, " : ", pass);
+    if (user === "admin" && pass === "admin@12") {
+        console.log(user, " : ", pass);
+        
       setIsLoggedIn(true);
-      window.location.href = "/dashboard";
+      navigate("/dashboard");
     } else {
-      alert("Invalid credentials! (use admin/admin)");
+      alert("Invalid credentials! (use admin/admin@12)");
     }
   };
 
