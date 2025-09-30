@@ -9,6 +9,10 @@
     padding: 5px;
     width: 200px;
   }
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
   .logout-btn {
     padding: 5px 10px;
     background: #e63946;
@@ -16,5 +20,25 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .theme-btn {
+    padding: 5px 10px;
+    background: #457b9d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .theme-btn, .logout-btn {
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .theme-btn:hover {
+    background: #35618f;
+    transform: scale(1.05);
+  }
+  .logout-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
   }
   
